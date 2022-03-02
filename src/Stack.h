@@ -63,6 +63,13 @@ void* Stack_Peek(const Stack* stack);
 int Stack_IsEmpty(const Stack* stack);
 
 /**
+ * @brief Deletes stack and frees all of it's members
+ * 
+ * @param stack pointer to stack
+ */
+void Stack_Delete(Stack* stack);
+
+/**
  * @brief Function type for data conversion to string.
  *        Takes in pointer to data that needs to be printed.
  * 

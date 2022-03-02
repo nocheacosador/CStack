@@ -58,7 +58,7 @@ int main()
             else
                 printf("%d\n", *data);
         }
-        else if (!strcmp("isEmpty", buf))
+        else if (!strcmp("is_empty", buf))
         {
             puts( Stack_IsEmpty(&stack) ? "true" : "false" );
         }
@@ -78,8 +78,7 @@ int main()
         }
     }
 
-    while (!Stack_IsEmpty(&stack))
-        Free(Stack_Pop(&stack));
+    Stack_Delete(&stack);
 
     PrintMemoryAllocationReport();
 }

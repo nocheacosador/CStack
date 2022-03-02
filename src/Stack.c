@@ -49,6 +49,12 @@ int Stack_IsEmpty(const Stack* stack)
     return stack->top == NULL;
 }
 
+void Stack_Delete(Stack* stack)
+{
+    while (!Stack_IsEmpty(&stack))
+        Free(Stack_Pop(&stack));
+}
+
 static char* defaultToString(void* data) 
 {
     size_t needed = snprintf(NULL, 0, "adress: 0x%p", data) + 1;
